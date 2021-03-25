@@ -33,3 +33,41 @@ void parse (char *line){
             long Y = POP (s);
             long X = POP (s);
             PUSH(s,X + Y);
+        }else if (strcmp(token, "-")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, X - Y);
+        /**
+        * multiplica dois valores 
+        */
+        }else if (strcmp(token, "*")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, X * Y);
+        /**
+        * divide dois valores 
+        */
+        }else if(strcmp(token, "/")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, X / Y);
+        /**
+        * exponencialização
+        */
+        }else if (strcmp(token, "#")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, pow(X,Y));
+        /**
+        * incrementa uma unidade 
+        */
+        }else if (strcmp(token, ")")== 0 ){
+            long Y = POP (s);
+            PUSH(s, ++Y);
+        /**
+        * decrementa uma unidade
+        */
+        }else if (strcmp(token, "(")== 0 ){
+            long Y = POP (s);
+            PUSH(s, --Y);
+            
