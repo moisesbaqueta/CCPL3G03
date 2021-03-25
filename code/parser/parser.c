@@ -70,4 +70,41 @@ void parse (char *line){
         }else if (strcmp(token, "(")== 0 ){
             long Y = POP (s);
             PUSH(s, --Y);
-            
+                /**
+        * resto de uma divisao inteira
+        */
+        }else if (strcmp(token, "%")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, X % Y);
+        /**
+        * bits em comum
+        */
+        }else if (strcmp(token, "&")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, Y & X );
+        /**
+        * coloca a zero todos os bits em comum e a 1 os bits diferentes 
+        */
+        }else if (strcmp(token, "^")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, Y ^ X);
+        /**
+        * troca os bits de um nr binario
+        */
+        }else if (strcmp(token, "~")== 0 ){
+            long Y = POP (s);
+            PUSH(s,(~Y));
+        /**
+        *  uniao de bits entre dois nr binarios 
+        */
+        }else if (strcmp(token, "|")== 0 ){
+            long Y = POP (s);
+            long X = POP (s);
+            PUSH(s, Y | X ); 
+        }   
+    }
+    print_stack(s); 
+}
