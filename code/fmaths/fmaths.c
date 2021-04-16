@@ -337,3 +337,117 @@ void MODULE(STACK *s) {
  * \brief exponencialização
  * @param s - passagem de stack como parametro  
  */
+void EXPO(STACK *s) {                                
+    DATA x = pop(s);                               
+    DATA y = pop(s);                               
+    DATA res;                                           
+ if(has_type(x, LONG) && has_type(y, LONG)) {           
+    res.type = LONG;                                    
+    res.LONG = pow(y.LONG,x.LONG);  }                   
+  else if (has_type(x, DOUBLE) && has_type(y, LONG)) {  
+    res.type = DOUBLE;                                  
+    res.DOUBLE = pow(y.LONG,x.DOUBLE);  }               
+  else if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) {
+    res.type = DOUBLE;                                  
+    res.DOUBLE = pow(y.DOUBLE,x.DOUBLE);    }           
+  else if (has_type(x, LONG) && has_type(y, DOUBLE)) {  
+    res.type = DOUBLE;                                  
+    res.DOUBLE = pow(y.DOUBLE,x.LONG) ;    }            
+  else if (has_type(x, CHAR) && has_type(y, LONG)) {    
+    res.type = LONG;                                    
+    res.LONG = pow(y.LONG,x.CHAR);  }                   
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {    
+    res.type = LONG;                                    
+    res.LONG = pow(y.CHAR,x.LONG);  }                   
+  else if (has_type(x, CHAR) && has_type(y, DOUBLE)) {  
+    res.type = DOUBLE;                                    
+    res.DOUBLE = pow(y.DOUBLE,x.CHAR);  }                 
+ else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {   
+    res.type = DOUBLE;                                    
+    res.DOUBLE = pow(y.CHAR,x.DOUBLE);  }                 
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {     
+    res.type = LONG;                                    
+    res.LONG = pow(y.CHAR,x.CHAR);  }               
+ push(s,res);
+}
+/**
+ * \brief funçao que determina os bits em comum
+ * @param s - passagem de stack como parametro  
+ */
+void AMPERSAND(STACK *s) {                              
+    DATA x = pop(s);                                
+    DATA y = pop(s);                                
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {            
+    res.type = LONG;                                     
+    res.LONG = x.LONG & y.LONG;  }                       
+  else if (has_type(x, CHAR) && has_type(y, LONG)) {     
+    res.type = LONG;                                     
+    res.LONG = x.CHAR & y.LONG;  }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {     
+    res.type = LONG;                                     
+    res.LONG = x.LONG & y.CHAR;  }                       
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = CHAR;                                     
+    res.CHAR = x.CHAR & y.CHAR;  }                       
+ push(s,res);
+}
+/**
+ * \brief funçao que coloca a zero todos os bits em comum e a 1 os bits diferentes 
+ * @param s - passagem de stack como parametro  
+ */ 
+void XOR(STACK *s)  {                                   
+    DATA x = pop(s);                                
+    DATA y = pop(s);                                
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {            
+    res.type = LONG;                                     
+    res.LONG = x.LONG ^ y.LONG;  }                       
+  else if (has_type(x, CHAR) && has_type(y, LONG)) {     
+    res.type = LONG;                                     
+    res.LONG = x.CHAR ^ y.LONG;  }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {     
+    res.type = LONG;                                     
+    res.LONG = x.LONG ^ y.CHAR;  }                       
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = LONG;                                     
+    res.LONG = x.CHAR ^ y.CHAR;  }                       
+ push(s,res);
+}
+/**
+ * \brief funçao que troca os bits 
+ * @param s - passagem de stack como parametro  
+ */
+void NOT(STACK *s)   {                                   
+    DATA x = pop(s);                                
+    DATA res;                                            
+ if(has_type(x,LONG)) {                                 
+    res.type = LONG;                                     
+    res.LONG = ~(x.LONG);  }                             
+  else if (has_type(x,CHAR)) {                          
+    res.type = CHAR;                                     
+    res.CHAR = ~(x.CHAR);  }                             
+ push(s,res);
+}
+/**
+ * \brief uniao de bits entre dois numeros binarios
+ * @param s - passagem de stack como parametro  
+ */
+void OR(STACK *s)    {                                   
+    DATA x = pop(s);                                
+    DATA y = pop(s);                                
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {            
+    res.type = LONG;                                     
+    res.LONG = (x.LONG | y.LONG);  }                     
+  else if (has_type(x, CHAR) && has_type(y, LONG)) {     
+    res.type = LONG;                                     
+    res.LONG = (x.CHAR | y.LONG);  }                     
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {     
+    res.type = LONG;                                     
+    res.LONG = (x.LONG | y.CHAR);  }                     
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = LONG;                                     
+    res.LONG = (x.CHAR | y.CHAR);  }                     
+ push(s,res);
+}
