@@ -117,3 +117,124 @@ void AT_SIGN(STACK *s) {
    push(s,X);                   
    push(s,W);  
 }          
+/**
+ * \brief funçao que copia o n-esimo elemento para o topo da stack
+ * @param s - passagem de stack como parametro   
+ * @param n - n-esimo elemento 
+ */  
+void COPY(STACK *s){        
+    int x = pop_LONG(s);
+    push(s, enesimo(s, x));   
+}  
+/**
+ * \brief funçao que soma os tipos  
+ * @param s - passagem de stack como parametro  
+ */
+void SUM(STACK *s) {                                      
+    DATA x = pop(s);                                     
+    DATA y = pop(s);                                     
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {            
+    res.type = LONG;                                     
+    res.LONG = x.LONG + y.LONG;  }                       
+  else if (has_type(x, DOUBLE) && has_type(y, LONG)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE + y.LONG;  }                   
+  else if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) { 
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE + y.DOUBLE;  }                 
+  else if (has_type(x, LONG) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.LONG + y.DOUBLE;  }                   
+  else if (has_type(x, CHAR) && has_type(y, LONG)) { 
+    res.type = LONG;                                     
+    res.LONG = x.CHAR + y.LONG;   }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {  
+    res.type = LONG;                                     
+    res.LONG = x.LONG + y.CHAR;  }                       
+  else if (has_type(x, CHAR) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.CHAR + y.DOUBLE;  }                 
+ else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {    
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE + y.CHAR;  }                 
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = LONG;                                     
+    res.LONG = x.CHAR + y.CHAR;  }                       
+ push(s,res); 
+}
+
+/**
+ * \brief funçao que subtrai os tipos  
+ * @param s - passagem de stack como parametro  
+ */
+void SUBTRACT(STACK *s) {                                      
+    DATA x = pop(s);                                     
+    DATA y = pop(s);                                     
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {             
+    res.type = LONG;                                     
+    res.LONG = y.LONG - x.LONG;  }                       
+  else if (has_type(x, DOUBLE) && has_type(y, LONG)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.LONG - x.DOUBLE;  }                   
+  else if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) { 
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.DOUBLE - x.DOUBLE;  }                 
+  else if (has_type(x, LONG) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.DOUBLE + x.LONG;  }                   
+  else if (has_type(x, CHAR) && has_type(y, LONG)) { 
+    res.type = LONG;                                     
+    res.LONG = y.LONG - x.CHAR;   }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {  
+    res.type = LONG;                                     
+    res.LONG = y.CHAR - x.LONG;  }                       
+  else if (has_type(x, CHAR) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.DOUBLE - x.CHAR;  }                 
+ else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {    
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.CHAR - x.DOUBLE ;  }                 
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = LONG;                                     
+    res.LONG = y.CHAR - x.CHAR;  }                       
+ push(s,res); 
+}
+/**
+ * \brief funçao que multiplica os tipos  
+ * @param s - passagem de stack como parametro  
+ */
+void MULTIPLY(STACK *s) {                                      
+    DATA x = pop(s);                                     
+    DATA y = pop(s);                                     
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {           
+    res.type = LONG;                                     
+    res.LONG = x.LONG * y.LONG;  }                       
+  else if (has_type(x, DOUBLE) && has_type(y, LONG)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE * y.LONG;  }                   
+  else if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) { 
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE * y.DOUBLE;  }                 
+  else if (has_type(x, LONG) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.LONG * y.DOUBLE;  }                   
+  else if (has_type(x, CHAR) && has_type(y, LONG)) { 
+    res.type = LONG;                                     
+    res.LONG = x.CHAR * y.LONG;   }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {  
+    res.type = LONG;                                     
+    res.LONG = x.LONG * y.CHAR;  }                       
+  else if (has_type(x, CHAR) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.CHAR * y.DOUBLE;  }                 
+ else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {    
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE * y.CHAR;  }                 
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = LONG;                                     
+    res.LONG = x.CHAR * y.CHAR;  }                       
+ push(s,res); 
+}
