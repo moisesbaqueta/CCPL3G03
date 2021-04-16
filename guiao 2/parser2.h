@@ -1,0 +1,1 @@
+void parse (char* line,  STACK *s);
