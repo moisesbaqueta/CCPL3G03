@@ -238,3 +238,102 @@ void MULTIPLY(STACK *s) {
     res.LONG = x.CHAR * y.CHAR;  }                       
  push(s,res); 
 }
+/**
+ * \brief funçao que divide os tipos  
+ * @param s - passagem de stack como parametro  
+ */
+void DIVISION(STACK *s) {                                      
+    DATA x = pop(s);                                     
+    DATA y = pop(s);                                     
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {             
+    res.type = LONG;                                     
+    res.LONG = y.LONG / x.LONG;  }                       
+  else if (has_type(x, DOUBLE) && has_type(y, LONG)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.LONG / x.DOUBLE;  }                   
+  else if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) { 
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.DOUBLE / x.DOUBLE;  }                 
+  else if (has_type(x, LONG) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.DOUBLE / x.LONG;  }                   
+  else if (has_type(x, CHAR) && has_type(y, LONG)) { 
+    res.type = LONG;                                     
+    res.LONG = y.LONG / x.CHAR;   }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {  
+    res.type = LONG;                                     
+    res.LONG = y.CHAR / x.LONG;  }                       
+  else if (has_type(x, CHAR) && has_type(y, DOUBLE)) {   
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.DOUBLE / x.CHAR;  }                 
+ else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {    
+    res.type = DOUBLE;                                   
+    res.DOUBLE = y.CHAR / x.DOUBLE ;  }                 
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = LONG;                                     
+    res.LONG = y.CHAR / x.CHAR;  }                       
+ push(s,res); 
+}
+/**
+ * \brief funçao que decrementa um  
+ * @param s - passagem de stack como parametro  
+ */
+void DECREMENT(STACK *s) {                             
+    DATA x = pop(s);                                
+    DATA res;                                            
+ if(has_type(x, LONG)) {                                 
+    res.type = LONG;                                     
+    res.LONG = x.LONG-1;  }                              
+  else if (has_type(x, DOUBLE)) {                        
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE-1;  }                          
+  else if (has_type(x, CHAR) ) {                         
+    res.type = CHAR;                                     
+    res.CHAR = x.CHAR-1;  }                             
+ push(s,res);
+}
+/**
+ * \brief funçao que incrementa um
+ * @param s - passagem de stack como parametro  
+ */
+void INCREMENT(STACK *s) {                               
+    DATA x = pop(s);                                
+    DATA res;                                            
+  if(has_type(x, LONG)) {                                
+    res.type = LONG;                                     
+    res.LONG = x.LONG+1;  }                              
+  else if (has_type(x, DOUBLE)) {                        
+    res.type = DOUBLE;                                   
+    res.DOUBLE = x.DOUBLE+1;  }                          
+  else if (has_type(x, CHAR) ) {                         
+    res.type = CHAR;                                     
+    res.CHAR = x.CHAR+1;  }                              
+ push(s,res);
+}
+/**
+ * \brief funçao que determina o resto de uma divisao inteira
+ * @param s - passagem de stack como parametro  
+ */
+void MODULE(STACK *s) {                                 
+    DATA x = pop(s);                                
+    DATA y = pop(s);                                
+    DATA res;                                            
+ if(has_type(x, LONG) && has_type(y, LONG)) {            
+    res.type = LONG;                                     
+    res.LONG = y.LONG % x.LONG;  }                       
+  else if (has_type(x, CHAR) && has_type(y, LONG)) {     
+    res.type = LONG;                                     
+    res.LONG = y.LONG % x.CHAR;  }                       
+  else if (has_type(x, LONG) && has_type(y, CHAR)) {     
+    res.type = LONG;                                     
+    res.LONG = y.CHAR % x.LONG;  }                       
+ else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    res.type = CHAR;                                     
+    res.CHAR = y.CHAR % x.CHAR;  }                       
+ push(s,res);
+}
+/**
+ * \brief exponencialização
+ * @param s - passagem de stack como parametro  
+ */
