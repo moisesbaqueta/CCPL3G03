@@ -21,3 +21,28 @@ typedef struct data {
 /**
  *  \brief struct que define a estrutura da stack , com uma variavel que dá o tamanho e o numero de elementos 
  */
+typedef struct stack {
+  DATA *stack;
+  int size;
+  int n_elems;
+} STACK;
+
+int has_type(DATA elem, int mask);
+STACK *create_stack();
+
+void push(STACK *s, DATA elem);
+DATA pop(STACK *s);
+DATA top(STACK *s);
+DATA enesimo(STACK *s, int n);
+void print_stack(STACK *s);
+
+#define STACK_OPERATION_PROTO(_type, _name)   \
+  void push_##_name(STACK *s, _type val);     \
+  _type pop_##_name(STACK *s);
+
+STACK_OPERATION_PROTO(long, LONG)
+STACK_OPERATION_PROTO(double, DOUBLE)
+STACK_OPERATION_PROTO(char, CHAR)
+STACK_OPERATION_PROTO(char *, STRING)
+
+#endif
