@@ -1,3 +1,7 @@
+/**
+ * @file ficheiro que contem o parse
+ * 
+ */
 #include "stack2.h"
 #include "fmaths.h"
 #include <stdio.h>
@@ -5,7 +9,15 @@
 #include <string.h>
 #include <math.h>
 
-
+/**
+ * \brief funçao que faz com que o conteúdo de uma linha seja lido (parse) 
+ *  @param line a linha que foi lida e da qual vai se fazer o parse 
+ *  @param strtol converte strings em long int 
+ *  @param strtod converte strings em double
+ *  @param strtok parte a string sempre que encontra uma delimitaçao 
+ *  @param strcmp compara duas strings
+ *  @param strlen indica o tamanho duma string 
+ */
 void parse(char *line, STACK *s) {
     char *delims = " \t\n";  
 
@@ -23,7 +35,7 @@ void parse(char *line, STACK *s) {
          push_CHAR(s,token[0]);
       } else {
          push_STRING(s, token);
-         }  
+      }
       } else if (strcmp(token, "+")== 0 )  { 
          SUM(s);
       } else if (strcmp(token, "-")== 0 ) {
@@ -70,4 +82,3 @@ void parse(char *line, STACK *s) {
     }
     print_stack(s); 
 }
-

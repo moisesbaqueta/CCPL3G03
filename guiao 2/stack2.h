@@ -1,22 +1,26 @@
 #ifndef ___STACK_H___
 #define ___STACK_H___
-
 #include <assert.h>
-
+/**
+ *  \brief struct que enumera os tipos e vai aplica-los na structdata 
+ */
 typedef enum {LONG = 1, DOUBLE = 2, CHAR = 4, STRING = 8} TYPE;
 
 #define INTEGER  (LONG | CHAR)
 #define NUMBER   (INTEGER | DOUBLE)
-
+/**
+ *  \brief struct que contem os varios tipos de dados 
+ */
 typedef struct data {
   TYPE type;
-  // Esta parte devia ser transformada numa union mais tarde
   long LONG;
   double DOUBLE;
   char CHAR;
   char *STRING;
 } DATA;
-
+/**
+ *  \brief struct que define a estrutura da stack , com uma variavel que dá o tamanho e o numero de elementos 
+ */
 typedef struct stack {
   DATA *stack;
   int size;
@@ -30,7 +34,6 @@ void push(STACK *s, DATA elem);
 DATA pop(STACK *s);
 DATA top(STACK *s);
 DATA enesimo(STACK *s, int n);
-int is_empty(STACK *s);
 void print_stack(STACK *s);
 
 #define STACK_OPERATION_PROTO(_type, _name)   \
