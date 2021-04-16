@@ -54,3 +54,57 @@ DATA pop(STACK *s) {
  *  @param n - n-ésimo elemento 
  *  @returns retorna n-ésimo elemento
  */
+DATA enesimo(STACK *s, int n){
+    return s->stack[s->n_elems - n - 1];
+}
+/**
+ *  \brief topo da stack
+ *  @param s - passagem de stack como parametro 
+ *  @returns retorna o valor que está no topo da stack
+ */
+DATA top(STACK *s) {
+  return s->stack[s->n_elems - 1];
+}
+/**
+ *  \brief funçao que imprime a stack 
+ *  @param s - passagem de stack como parametro 
+ */
+void print_stack(STACK *s) {
+  for(int K = 0; K < s->n_elems; K++) {
+    DATA elem = s->stack[K];
+    TYPE type = elem.type;
+    switch(type) {
+      case LONG:
+        printf("""%ld", elem.LONG); break;
+      case DOUBLE:
+        printf("""%g", elem.DOUBLE); break;
+      case CHAR:
+        printf("""%c", elem.CHAR); break;
+      case STRING:
+        printf("""%s", elem.STRING); break;
+    }
+  }
+  printf("\n");
+}
+/**
+ *  \brief macro que faz a substituiçao de acordo com o stack operation correspondente para podermos ter uma forma rapida de um push e pop para cada tipo 
+ */
+#define STACK_OPERATION(_type, _name)         \
+  void push_##_name(STACK *s, _type val) {    \
+    DATA elem;                                \
+    elem.type = _name;                        \
+    elem._name = val;                         \
+    push(s, elem);                            \
+  }                                           \
+  _type pop_##_name(STACK *s) {               \
+    DATA elem = pop(s);                       \
+    assert(elem.type == _name);               \
+    return elem._name;                        \
+  }
+/**
+ *  \brief prototipos para a macro
+ */
+STACK_OPERATION(long, LONG)
+STACK_OPERATION(double, DOUBLE)
+STACK_OPERATION(char, CHAR)
+STACK_OPERATION(char *, STRING)
