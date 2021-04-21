@@ -2,7 +2,7 @@
  * @file Ficheiro que contem a funçao principal
  * 
  */
-#include "parser2.h"
+#include "parser.h"
 #include "stack2.h"
 #include <stdio.h>
 
