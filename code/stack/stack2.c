@@ -87,7 +87,7 @@ void print_stack(STACK *s) {
   printf("\n");
 }
 /**
- *  \brief macro que faz a substituiçao de acordo com o stack operation correspondente para podermos ter uma forma rapida de um push e pop para cada tipo 
+ *  Macro macro que faz a substituiçao de acordo com o stack operation correspondente para podermos ter uma forma rapida de um push e pop para cada tipo 
  */
 #define STACK_OPERATION(_type, _name)         \
   void push_##_name(STACK *s, _type val) {    \
