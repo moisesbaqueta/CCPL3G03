@@ -33,7 +33,9 @@ DATA pop(STACK *s);
 DATA top(STACK *s);
 DATA enesimo(STACK *s, int n);
 void print_stack(STACK *s);
-
+/**
+ *  Macro macro que faz a substituiçao de acordo com o stack operation correspondente para podermos ter uma forma rapida de um push e pop para cada tipo 
+ */
 #define STACK_OPERATION_PROTO(_type, _name)   \
   void push_##_name(STACK *s, _type val);     \
   _type pop_##_name(STACK *s);
