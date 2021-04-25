@@ -6,8 +6,6 @@
  */
 typedef enum {LONG = 1, DOUBLE = 2, CHAR = 4, STRING = 8} TYPE;
 
-#define INTEGER  (LONG | CHAR)
-#define NUMBER   (INTEGER | DOUBLE)
 /**
  *  \brief struct que contem os varios tipos de dados 
  */
