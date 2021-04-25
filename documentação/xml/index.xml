@@ -80,8 +80,6 @@
     <member refid="stack2_8c_1a42b87bab2d601cb02900935c9b80fc23" kind="function"><name>print_stack</name></member>
   </compound>
   <compound refid="stack2_8h" kind="file"><name>stack2.h</name>
-    <member refid="stack2_8h_1a91d43eadec33c80149f92e5abf5df58c" kind="define"><name>INTEGER</name></member>
-    <member refid="stack2_8h_1abc544a4ed22112e62773c113652c5063" kind="define"><name>NUMBER</name></member>
     <member refid="stack2_8h_1aa7e195e1283260f6225089d9c6e4f184" kind="define"><name>STACK_OPERATION_PROTO</name></member>
     <member refid="stack2_8h_1a0bc6723d5d4776ab7cdc646728b775f7" kind="enum"><name>TYPE</name></member>
     <member refid="stack2_8h_1a0bc6723d5d4776ab7cdc646728b775f7aaee055c4a5aba7d55774e4f1c01dacea" kind="enumvalue"><name>LONG</name></member>

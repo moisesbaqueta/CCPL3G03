@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="stack2.h" line="25" column="8" bodyfile="stack2.h" bodystart="25" bodyend="-1"/>
+        <location file="stack2.h" line="23" column="8" bodyfile="stack2.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structstack_1a926a597bae913d1bf4772be35c14b71e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="stack2.h" line="26" column="7" bodyfile="stack2.h" bodystart="26" bodyend="-1"/>
+        <location file="stack2.h" line="24" column="7" bodyfile="stack2.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structstack_1a1ed7f871b976cba29e4c5a5c6df401dd" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="stack2.h" line="27" column="7" bodyfile="stack2.h" bodystart="27" bodyend="-1"/>
+        <location file="stack2.h" line="25" column="7" bodyfile="stack2.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -62,7 +62,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="stack2.h" line="24" column="20" bodyfile="stack2.h" bodystart="24" bodyend="28"/>
+    <location file="stack2.h" line="22" column="20" bodyfile="stack2.h" bodystart="22" bodyend="26"/>
     <listofallmembers>
       <member refid="structstack_1a1ed7f871b976cba29e4c5a5c6df401dd" prot="public" virt="non-virtual"><scope>stack</scope><name>n_elems</name></member>
       <member refid="structstack_1a926a597bae913d1bf4772be35c14b71e" prot="public" virt="non-virtual"><scope>stack</scope><name>size</name></member>

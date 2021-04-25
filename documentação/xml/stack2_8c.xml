@@ -49,9 +49,9 @@
     return elem._name;                        \
   }</initializer>
         <briefdescription>
-<para>macro que faz a substituiçao de acordo com o stack operation correspondente para podermos ter uma forma rapida de um push e pop para cada tipo </para>
         </briefdescription>
         <detaileddescription>
+<para>Macro macro que faz a substituiçao de acordo com o stack operation correspondente para podermos ter uma forma rapida de um push e pop para cada tipo </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
