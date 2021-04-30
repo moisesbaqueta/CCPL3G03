@@ -378,3 +378,133 @@ void eShortcout(STACK *s) {
         push(s,r);
     } else if(has_type(x, CHAR) && has_type(y, DOUBLE)) {
         if(x.CHAR == 0 || y.DOUBLE == 0) { 
+r.type = LONG;
+           r.LONG = 0;
+        } else {
+           r.type = CHAR; 
+           r.CHAR = x.CHAR;                     
+        }
+        push(s,r);
+    }
+}
+
+/**
+ * \brief funçao que coloca no topo da stack 0 se os dois ultimos elementos da stack forem zero , caso contrario retorna o penultimo elemento
+ * @param s - passagem de stack como parametro  
+ */
+// escolhe o que está em ultimo  FUNCIONA
+void ouShortcout(STACK *s) {
+    DATA x = pop(s);   
+    DATA y = pop(s);   
+    DATA r; 
+    if(has_type(x, LONG) && has_type(y, LONG)) {
+        if(x.LONG == 0 && y.LONG == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.LONG != 0 && y.LONG ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, LONG) && has_type(y, DOUBLE)) {
+        if(x.LONG == 0 && y.DOUBLE == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.LONG != 0 && y.DOUBLE ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, DOUBLE) && has_type(y, LONG)) {
+        if(x.DOUBLE == 0 && y.DOUBLE == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.DOUBLE != 0 && y.LONG ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, DOUBLE) && has_type(y, DOUBLE)) {     
+        if(x.DOUBLE == 0 && y.DOUBLE == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.DOUBLE != 0 && y.DOUBLE ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, CHAR) && has_type(y, LONG)) {
+        if(x.CHAR == 0 && y.LONG == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.CHAR != 0 && y.LONG ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, LONG) && has_type(y, CHAR)) {
+        if(x.LONG == 0 && y.CHAR == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.LONG != 0 && y.CHAR == 0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, CHAR) && has_type(y, CHAR)) {
+        if(x.CHAR == 0 && y.CHAR == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.CHAR != 0 && y.CHAR ==0) {                      
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, DOUBLE) && has_type(y, CHAR)) {
+        if(x.DOUBLE == 0 && y.CHAR == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.DOUBLE != 0 && y.CHAR ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    } else if(has_type(x, CHAR) && has_type(y, DOUBLE)) {
+        if(x.CHAR == 0 && y.DOUBLE == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else if (x.CHAR != 0 && y.DOUBLE ==0) {                          
+           push(s,x); 
+        } else {
+           push(s,y);
+        }
+    }
+}
+/**
+ * \brief se o topo da stack for verdadeiro, ou seja, qualquer elemento exceto o zero, a funçao coloca no topo da stack o penultimo elemento, caso contrario coloca o antepenultimo 
+ * @param s - passagem de stack como parametro  
+ */
+void ifThenElse(STACK *s) {
+    DATA x = pop(s);          
+    DATA y = pop(s);        
+    DATA z = pop(s);        
+    if(has_type(z, LONG)) {
+      if(z.LONG !=0) {
+       push(s,y); 
+      } else {
+       push(s,x); 
+      }
+    } else if(has_type(z, DOUBLE)) {
+      if(z.DOUBLE !=0) {
+       push(s,y); 
+      } else {
+       push(s,x); 
+      }
+    } else if(has_type(z, CHAR)) {
+      if(z.CHAR !=0) {
+       push(s,y); 
+      } else {
+       push(s,x); 
+      }
+    }  
+}
