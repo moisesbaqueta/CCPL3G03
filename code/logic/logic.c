@@ -378,7 +378,7 @@ void eShortcout(STACK *s) {
         push(s,r);
     } else if(has_type(x, CHAR) && has_type(y, DOUBLE)) {
         if(x.CHAR == 0 || y.DOUBLE == 0) { 
-r.type = LONG;
+           r.type = LONG;
            r.LONG = 0;
         } else {
            r.type = CHAR; 
