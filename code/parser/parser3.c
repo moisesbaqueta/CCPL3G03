@@ -106,3 +106,111 @@ void parse3(char *line, STACK *s) {
       letras(s,'U');
    } else if(strcmp(token, "V")== 0 )  {
       letras(s,'V');
+   } else if(strcmp(token, "W")== 0 )  {
+      letras(s,'W');
+   } else if(strcmp(token, "X")== 0 )  { // 23
+      letras(s,'X');
+   } else if(strcmp(token, "Y")== 0 )  {
+      letras(s,'Y');
+   } else if(strcmp(token, "Z")== 0 )  {
+      letras(s,'Z');
+   } else if(strcmp(token, ":A")== 0 )  {
+      doisPontosLetra(s,'A');
+   } else if(strcmp(token, ":B")== 0 )  {
+      doisPontosLetra(s,'B');
+   } else if(strcmp(token, ":C")== 0 )  {
+      doisPontosLetra(s,'C');
+   } else if(strcmp(token, ":D")== 0 )  {
+      doisPontosLetra(s,'D');
+   } else if(strcmp(token, ":E")== 0 )  {
+      doisPontosLetra(s,'E');
+   } else if(strcmp(token, ":F")== 0 )  {
+      doisPontosLetra(s,'F');
+   } else if(strcmp(token, ":G")== 0 )  {
+      doisPontosLetra(s,'G');
+   } else if(strcmp(token, ":H")== 0 )  {
+      doisPontosLetra(s,'H');
+   } else if(strcmp(token, ":I")== 0 )  {
+      doisPontosLetra(s,'I');
+   } else if(strcmp(token, ":J")== 0 )  {
+      doisPontosLetra(s,'J');
+   } else if(strcmp(token, ":K")== 0 )  {
+      doisPontosLetra(s,'K');
+   } else if(strcmp(token, ":L")== 0 )  {
+      doisPontosLetra(s,'L');
+   } else if(strcmp(token, ":M")== 0 )  {
+      doisPontosLetra(s,'M');
+   } else if(strcmp(token, ":N")== 0 )  {
+      doisPontosLetra(s,'N');
+   } else if(strcmp(token, ":O")== 0 )  {
+      doisPontosLetra(s,'O');
+   } else if(strcmp(token, ":P")== 0 )  {
+      doisPontosLetra(s,'P');
+   } else if(strcmp(token, ":Q")== 0 )  {
+      doisPontosLetra(s,'Q');
+   } else if(strcmp(token, ":R")== 0 )  {
+      doisPontosLetra(s,'R');
+   } else if(strcmp(token, ":S")== 0 )  {
+      doisPontosLetra(s,'S');
+   } else if(strcmp(token, ":T")== 0 )  {
+      doisPontosLetra(s,'T');
+   } else if(strcmp(token, ":U")== 0 )  {
+      doisPontosLetra(s,'U');
+   } else if(strcmp(token, ":V")== 0 )  {
+      doisPontosLetra(s,'V');
+   } else if(strcmp(token, ":W")== 0 )  {
+      doisPontosLetra(s,'W');
+   }else if(strcmp(token, ":X")== 0 )  {
+      doisPontosLetra(s,'X');
+   } else if(strcmp(token, ":Y")== 0 )  {
+      doisPontosLetra(s,'Y');
+   } else if(strcmp(token, ":Z")== 0 )  {
+      doisPontosLetra(s,'Z');
+   }  else if (strcmp(token, "+")== 0 )  { 
+      SUM(s);
+   } else if (strcmp(token, "-")== 0 ) {
+      SUBTRACT(s);
+   } else if (strcmp(token, "*")== 0 ) {
+      MULTIPLY(s);
+   } else if (strcmp(token, "/")== 0 ) {
+      DIVISION(s);
+   } else if (strcmp(token, "(")== 0 ) { 
+      DECREMENT(s);
+   } else if (strcmp(token, ")")== 0 ) { 
+      INCREMENT(s);                          
+   } else if (strcmp(token, "%")== 0 ) { 
+      MODULE(s);                          
+   } else if (strcmp(token, "#")== 0 ) { 
+      EXPO(s); 
+   } else if (strcmp(token, "&")== 0 ) { 
+      AMPERSAND(s); 
+   } else if (strcmp(token, "^")== 0 ) { 
+      XOR(s); 
+   } else if (strcmp(token, "~")== 0 ) { 
+      NOT(s); 
+   } else if (strcmp(token, "|")== 0 ) { 
+      OR(s); 
+   } else if(strcmp(token, "_")== 0 )  { 
+      UNDERSCORE(s);
+   } else if(strcmp(token, ";")== 0 )  { 
+      SEMICOLON(s);
+   } else if(strcmp(token, "\\")== 0 ) {
+      BACK_SLASH(s);
+   } else if(strcmp(token, "@")== 0 ) {
+      AT_SIGN(s);
+   } else if(strcmp(token, "$")== 0 ) { 
+      COPY(s);
+   } else if(strcmp(token, "l")== 0 ) {
+      read(s);
+   } else if(strcmp(token, "i")== 0 ) {
+      toInt(s);
+   } else if(strcmp(token, "f")== 0 ) { 
+      toDouble(s);
+   } else if (strcmp(token, "c")== 0 ) {
+      toChar(s);
+   } else {
+      push_STRING(s, token);
+   }
+   }
+   print_stack(s);
+}
