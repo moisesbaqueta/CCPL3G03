@@ -251,3 +251,130 @@ if(has_type(x, LONG) && has_type(y, LONG)) {
         r.LONG = 1 ;  
     }else{ 
         r.LONG = 0; }
+    } else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {    
+    if(x.DOUBLE == y.CHAR){
+        r.LONG = 1 ;  
+    }else{ 
+        r.LONG = 0; }
+} else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+    if(x.CHAR == y.CHAR){
+        r.LONG = 1 ;  
+    }else{ 
+        r.LONG = 0; }
+    }
+ push(s,r); 
+}
+/**
+ * \brief funçao que coloca no topo da stack 1 (verdadeiro) se o topo for zero e 0 se o topo da stack for qualquer elemento exceto o zero  
+ * @param s - passagem de stack como parametro  
+ */
+void NAO(STACK *s) {                                      
+    DATA x = pop(s);
+    DATA r;    
+    r.type = LONG;                                                                           
+ if(has_type(x, LONG)) {            
+    if(x.LONG == 0 ){
+        r.LONG = 1;
+    }else{
+         r.LONG = 0;
+    }
+} else if(has_type(x, DOUBLE)) {            
+    if(x.DOUBLE == 0 ){
+        r.LONG = 1;
+    }else{
+         r.LONG = 0;
+    }
+} else if(has_type(x, CHAR)) {            
+    if(x.CHAR == 0 ){
+        r.LONG = 1;
+    }else{
+         r.LONG = 0;
+    }
+} if(has_type(x, STRING)) {            
+    if(x.STRING == 0 ){
+        r.LONG = 1;
+    }else{
+         r.LONG = 0;
+    }
+}
+push(s,r);
+}
+/**
+ * \brief funçao que coloca no topo da stack 0 se um dos dois ultimos elementos é zero, caso contrario retorna o topo da stack 
+ * @param s - passagem de stack como parametro  
+ */
+void eShortcout(STACK *s) {
+    DATA x = pop(s);   
+    DATA y = pop(s);   
+    DATA r; 
+    if(has_type(x, LONG) && has_type(y, LONG)) {
+        if(x.LONG == 0 || y.LONG == 0) {
+           r.type = LONG;
+           r.LONG = 0;
+           push(s,r);
+        } else {                          
+           push(s,x); 
+        }
+    } else if(has_type(x, LONG) && has_type(y, DOUBLE)) {
+        if(x.LONG == 0 || y.DOUBLE== 0) { 
+           r.type = LONG;
+           r.LONG = 0;
+        } else {
+           r.type = LONG; 
+           r.LONG = x.LONG;                     
+        }
+        push(s,r);
+    } else if(has_type(x, DOUBLE) && has_type(y, LONG)) {
+        if(x.DOUBLE == 0 || y.LONG == 0) { 
+           r.type = LONG;
+           r.LONG = 0;
+        } else {
+           r.type = DOUBLE; 
+           r.DOUBLE = x.DOUBLE;                     
+        }
+        push(s,r); 
+    } else if(has_type(x, DOUBLE) && has_type(y, DOUBLE)) {    // 0.0 nao funciona 
+        if(x.DOUBLE == 0 || y.DOUBLE == 0) { 
+           r.type = LONG;
+           r.LONG = 0;
+        } else {
+           r.type = DOUBLE; 
+           r.DOUBLE = x.DOUBLE;                     
+        }
+        push(s,r);
+    } else if(has_type(x, CHAR) && has_type(y, LONG)) {
+        if(y.LONG == 0 || x.CHAR == 0) { 
+           r.type = LONG;
+           r.LONG = 0;
+        } else {
+           r.type = CHAR; 
+           r.CHAR = x.CHAR;                     
+        }
+        push(s,r);
+    } else if(has_type(x, LONG) && has_type(y, CHAR)) {
+        if(x.LONG == 0 || y.CHAR == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else {                          
+           push(s,x); 
+        }
+    } else if(has_type(x, CHAR) && has_type(y, CHAR)) {
+        if(x.CHAR == 0 || y.CHAR == 0) {
+           r.LONG = 0;
+           push(s,r);
+        } else {
+           r.type = CHAR; 
+           r.CHAR = x.CHAR;                     
+        }
+        push(s,r);
+    } else if(has_type(x, DOUBLE) && has_type(y, CHAR)) {
+        if(x.DOUBLE == 0 || y.CHAR == 0) { 
+           r.type = LONG;
+           r.LONG = 0;
+        } else {
+           r.type = DOUBLE; 
+           r.DOUBLE = x.DOUBLE;                     
+        }
+        push(s,r);
+    } else if(has_type(x, CHAR) && has_type(y, DOUBLE)) {
+        if(x.CHAR == 0 || y.DOUBLE == 0) { 
