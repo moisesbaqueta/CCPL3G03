@@ -2,7 +2,7 @@
  * @file ficheiro que contem as expressoes matematicas
  * 
  */
-#include "stack2.h"
+#include "stack3.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
