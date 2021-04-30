@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="parser3_8h" kind="file" language="C++">
+    <compoundname>parser3.h</compoundname>
+    <includes refid="stack3_8h" local="yes">stack3.h</includes>
+    <includedby refid="main3_8c" local="yes">main3.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="1">
+        <label>parser3.h</label>
+        <link refid="parser3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stack3.h</label>
+        <link refid="stack3_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>parser3.h</label>
+        <link refid="parser3_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main3.c</label>
+        <link refid="main3_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="parser3_8h_1a2b2854114038c49d4bdb6310dcf3a02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse3</definition>
+        <argsstring>(char *line, STACK *s)</argsstring>
+        <name>parse3</name>
+        <param>
+          <type>char *</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que faz com que o conteúdo de uma linha seja lido (parse) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a linha que foi lida e da qual vai se fazer o parse </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strtol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>converte strings em long int </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strtod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>converte strings em double </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strtok</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parte a string sempre que encontra uma delimitaçao </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strcmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>compara duas strings </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indica o tamanho duma string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="parser3.h" line="2" column="6" bodyfile="parser3.c" bodystart="27" bodyend="216" declfile="parser3.h" declline="2" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stack3_8h" kindref="compound">stack3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="parser3_8h_1a2b2854114038c49d4bdb6310dcf3a02a" kindref="member">parse3</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>line,<sp/><ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);<sp/></highlight></codeline>
+    </programlisting>
+    <location file="parser3.h"/>
+  </compounddef>
+</doxygen>

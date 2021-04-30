@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="variaveis_8h" kind="file" language="C++">
+    <compoundname>variaveis.h</compoundname>
+    <includedby refid="parser3_8c" local="yes">parser3.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>variaveis.h</label>
+        <link refid="variaveis_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>parser3.c</label>
+        <link refid="parser3_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="variaveis_8h_1a2386fe98afde4232f9c44ed3cac92613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stack3_8h_1a4e41b34fb87c918e012cde5b33af31bf" kindref="member">DATA</ref></type>
+        <definition>DATA transformaLONG</definition>
+        <argsstring>(long x)</argsstring>
+        <name>transformaLONG</name>
+        <param>
+          <type>long</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>funçao que converte para LONG o topo da stack <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de um elemento como parametro </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retorna o elemento ja convertido </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="variaveis.h" line="1" column="6" bodyfile="variaveis.c" bodystart="12" bodyend="17" declfile="variaveis.h" declline="1" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="variaveis_8h_1a948014d1a960f24b606610b1d2d31246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stack3_8h_1a4e41b34fb87c918e012cde5b33af31bf" kindref="member">DATA</ref></type>
+        <definition>DATA transformaDOUBLE</definition>
+        <argsstring>(double x)</argsstring>
+        <name>transformaDOUBLE</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>funçao que converte para DOUBLE o topo da stack <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de um elemento como parametro </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retorna o elemento ja convertido </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="variaveis.h" line="3" column="6" bodyfile="variaveis.c" bodystart="23" bodyend="28" declfile="variaveis.h" declline="3" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="variaveis_8h_1a768af51fbdf9a79f8f037baabf5baeb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stack3_8h_1a4e41b34fb87c918e012cde5b33af31bf" kindref="member">DATA</ref></type>
+        <definition>DATA transformaCHAR</definition>
+        <argsstring>(char x)</argsstring>
+        <name>transformaCHAR</name>
+        <param>
+          <type>char</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>funçao que converte para CHAR o topo da stack <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de um elemento como parametro </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retorna o elemento ja convertido </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="variaveis.h" line="5" column="6" bodyfile="variaveis.c" bodystart="34" bodyend="39" declfile="variaveis.h" declline="5" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="variaveis_8h_1a262fd2995fb913ac19aaed4466449def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void new_stack</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>new_stack</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que vai a certa posição do array e exibe o valor por omissão </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem da stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="variaveis.h" line="7" column="6" bodyfile="variaveis.c" bodystart="44" bodyend="56" declfile="variaveis.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="variaveis_8h_1a1f9a744b20e31dfad2f9310a22bd151d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void letras</definition>
+        <argsstring>(STACK *s, char letra)</argsstring>
+        <name>letras</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>letra</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack o conteúdo da variável que é passado como parametro </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem da stack como parametro </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>letra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem da variavel como elemento </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="variaveis.h" line="9" column="6" bodyfile="variaveis.c" bodystart="62" bodyend="74" declfile="variaveis.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="variaveis_8h_1aa97ae06406264a97b678671578465b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void doisPontosLetra</definition>
+        <argsstring>(STACK *s, char letra)</argsstring>
+        <name>doisPontosLetra</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>letra</declname>
+        </param>
+        <briefdescription>
+<para>funçao que copia o que está no topo da stack para a variável </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem da stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>letra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem da variavel como parametro </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="variaveis.h" line="11" column="6" bodyfile="variaveis.c" bodystart="81" bodyend="92" declfile="variaveis.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><ref refid="structdata" kindref="compound">DATA</ref><sp/><ref refid="variaveis_8h_1a2386fe98afde4232f9c44ed3cac92613" kindref="member">transformaLONG</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="structdata" kindref="compound">DATA</ref><sp/><ref refid="variaveis_8h_1a948014d1a960f24b606610b1d2d31246" kindref="member">transformaDOUBLE</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="structdata" kindref="compound">DATA</ref><sp/><ref refid="variaveis_8h_1a768af51fbdf9a79f8f037baabf5baeb3" kindref="member">transformaCHAR</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="variaveis_8h_1a262fd2995fb913ac19aaed4466449def" kindref="member">new_stack</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="variaveis_8h_1a1f9a744b20e31dfad2f9310a22bd151d" kindref="member">letras</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letra);<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="variaveis_8h_1aa97ae06406264a97b678671578465b36" kindref="member">doisPontosLetra</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letra);<sp/></highlight></codeline>
+    </programlisting>
+    <location file="variaveis.h"/>
+  </compounddef>
+</doxygen>

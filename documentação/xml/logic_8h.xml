@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="logic_8h" kind="file" language="C++">
+    <compoundname>logic.h</compoundname>
+    <includedby refid="parser3_8c" local="yes">parser3.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>parser3.c</label>
+        <link refid="parser3_8c"/>
+      </node>
+      <node id="1">
+        <label>logic.h</label>
+        <link refid="logic_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logic_8h_1ab420fb61501cb4a7a3c765d2cd00bcb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EMAIOR</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>EMAIOR</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack o maior entre os dois elementos do topo da stack <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="1" column="6" bodyfile="logic.c" bodystart="11" bodyend="50" declfile="logic.h" declline="1" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1a454bffa5d04a6394bd11d4ec40057bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EMENOR</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>EMENOR</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack o menor entre os dois elementos do topo da stack <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="3" column="6" bodyfile="logic.c" bodystart="55" bodyend="94" declfile="logic.h" declline="3" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1acedf6b27be4168e4e90597914dce6969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BIGGER</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>BIGGER</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack 1 (verdadeiro) se o topo for inferior ao penultimo elemento e 0 (falso) se for superior </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="5" column="6" bodyfile="logic.c" bodystart="99" bodyend="152" declfile="logic.h" declline="5" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1a992311a356550e46528bc1d03eb23485" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SMALLER</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>SMALLER</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack 0 (falso) se o topo for inferior ao penultimo elemento e 1 (verdadeiro) se for superior </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="7" column="6" bodyfile="logic.c" bodystart="157" bodyend="209" declfile="logic.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1a5b449276dd008f02ea08a2cd6ba6f58e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EQUAL</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>EQUAL</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack 1 (verdadeiro) se o topo e o penultimo forem iguais e 0 (falso) se forem diferentes </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="9" column="6" bodyfile="logic.c" bodystart="214" bodyend="266" declfile="logic.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1ae60b3ad1e403dc5348a4549f5b45fce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAO</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>NAO</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack 1 (verdadeiro) se o topo for zero e 0 se o topo da stack for qualquer elemento exceto o zero <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="11" column="6" bodyfile="logic.c" bodystart="271" bodyend="301" declfile="logic.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1a39e3579f52e7acc7556dd85dccb254b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eShortcout</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>eShortcout</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack 0 se um dos dois ultimos elementos é zero, caso contrario retorna o topo da stack </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="13" column="6" bodyfile="logic.c" bodystart="306" bodyend="389" declfile="logic.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1acdb6eda92820c2cd303a492c8376c1e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ouShortcout</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>ouShortcout</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>funçao que coloca no topo da stack 0 se os dois ultimos elementos da stack forem zero , caso contrario retorna o penultimo elemento </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="15" column="6" bodyfile="logic.c" bodystart="396" bodyend="482" declfile="logic.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="logic_8h_1ae729ece2114ad9a6ad90d575ca4c51df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ifThenElse</definition>
+        <argsstring>(STACK *s)</argsstring>
+        <name>ifThenElse</name>
+        <param>
+          <type><ref refid="stack3_8h_1ade8bb1f37e07eb511f3873082665d739" kindref="member">STACK</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>se o topo da stack for verdadeiro, ou seja, qualquer elemento exceto o zero, a funçao coloca no topo da stack o penultimo elemento, caso contrario coloca o antepenultimo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- passagem de stack como parametro <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="logic.h" line="17" column="6" bodyfile="logic.c" bodystart="487" bodyend="510" declfile="logic.h" declline="17" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1ab420fb61501cb4a7a3c765d2cd00bcb5" kindref="member">EMAIOR</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a454bffa5d04a6394bd11d4ec40057bfb" kindref="member">EMENOR</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1acedf6b27be4168e4e90597914dce6969" kindref="member">BIGGER</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a992311a356550e46528bc1d03eb23485" kindref="member">SMALLER</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a5b449276dd008f02ea08a2cd6ba6f58e" kindref="member">EQUAL</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1ae60b3ad1e403dc5348a4549f5b45fce7" kindref="member">NAO</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1a39e3579f52e7acc7556dd85dccb254b9" kindref="member">eShortcout</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1acdb6eda92820c2cd303a492c8376c1e3" kindref="member">ouShortcout</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logic_8h_1ae729ece2114ad9a6ad90d575ca4c51df" kindref="member">ifThenElse</ref>(<ref refid="structstack" kindref="compound">STACK</ref><sp/>*s);</highlight></codeline>
+    </programlisting>
+    <location file="logic.h"/>
+  </compounddef>
+</doxygen>
