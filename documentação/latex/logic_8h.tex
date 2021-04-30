@@ -1,0 +1,178 @@
+\hypertarget{logic_8h}{}\doxysection{logic.\+h File Reference}
+\label{logic_8h}\index{logic.h@{logic.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{logic_8h_ab420fb61501cb4a7a3c765d2cd00bcb5}{E\+M\+A\+I\+OR}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack o maior entre os dois elementos do topo da stack ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a454bffa5d04a6394bd11d4ec40057bfb}{E\+M\+E\+N\+OR}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack o menor entre os dois elementos do topo da stack ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_acedf6b27be4168e4e90597914dce6969}{B\+I\+G\+G\+ER}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack 1 (verdadeiro) se o topo for inferior ao penultimo elemento e 0 (falso) se for superior \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a992311a356550e46528bc1d03eb23485}{S\+M\+A\+L\+L\+ER}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack 0 (falso) se o topo for inferior ao penultimo elemento e 1 (verdadeiro) se for superior \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a5b449276dd008f02ea08a2cd6ba6f58e}{E\+Q\+U\+AL}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack 1 (verdadeiro) se o topo e o penultimo forem iguais e 0 (falso) se forem diferentes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_ae60b3ad1e403dc5348a4549f5b45fce7}{N\+AO}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack 1 (verdadeiro) se o topo for zero e 0 se o topo da stack for qualquer elemento exceto o zero ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a39e3579f52e7acc7556dd85dccb254b9}{e\+Shortcout}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack 0 se um dos dois ultimos elementos é zero, caso contrario retorna o topo da stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_acdb6eda92820c2cd303a492c8376c1e3}{ou\+Shortcout}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack 0 se os dois ultimos elementos da stack forem zero , caso contrario retorna o penultimo elemento \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_ae729ece2114ad9a6ad90d575ca4c51df}{if\+Then\+Else}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em se o topo da stack for verdadeiro, ou seja, qualquer elemento exceto o zero, a funçao coloca no topo da stack o penultimo elemento, caso contrario coloca o antepenultimo \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{logic_8h_acedf6b27be4168e4e90597914dce6969}\label{logic_8h_acedf6b27be4168e4e90597914dce6969}} 
+\index{logic.h@{logic.h}!BIGGER@{BIGGER}}
+\index{BIGGER@{BIGGER}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{BIGGER()}{BIGGER()}}
+{\footnotesize\ttfamily void B\+I\+G\+G\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack 1 (verdadeiro) se o topo for inferior ao penultimo elemento e 0 (falso) se for superior 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_ab420fb61501cb4a7a3c765d2cd00bcb5}\label{logic_8h_ab420fb61501cb4a7a3c765d2cd00bcb5}} 
+\index{logic.h@{logic.h}!EMAIOR@{EMAIOR}}
+\index{EMAIOR@{EMAIOR}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{EMAIOR()}{EMAIOR()}}
+{\footnotesize\ttfamily void E\+M\+A\+I\+OR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack o maior entre os dois elementos do topo da stack ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_a454bffa5d04a6394bd11d4ec40057bfb}\label{logic_8h_a454bffa5d04a6394bd11d4ec40057bfb}} 
+\index{logic.h@{logic.h}!EMENOR@{EMENOR}}
+\index{EMENOR@{EMENOR}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{EMENOR()}{EMENOR()}}
+{\footnotesize\ttfamily void E\+M\+E\+N\+OR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack o menor entre os dois elementos do topo da stack ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_a5b449276dd008f02ea08a2cd6ba6f58e}\label{logic_8h_a5b449276dd008f02ea08a2cd6ba6f58e}} 
+\index{logic.h@{logic.h}!EQUAL@{EQUAL}}
+\index{EQUAL@{EQUAL}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{EQUAL()}{EQUAL()}}
+{\footnotesize\ttfamily void E\+Q\+U\+AL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack 1 (verdadeiro) se o topo e o penultimo forem iguais e 0 (falso) se forem diferentes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_a39e3579f52e7acc7556dd85dccb254b9}\label{logic_8h_a39e3579f52e7acc7556dd85dccb254b9}} 
+\index{logic.h@{logic.h}!eShortcout@{eShortcout}}
+\index{eShortcout@{eShortcout}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{eShortcout()}{eShortcout()}}
+{\footnotesize\ttfamily void e\+Shortcout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack 0 se um dos dois ultimos elementos é zero, caso contrario retorna o topo da stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_ae729ece2114ad9a6ad90d575ca4c51df}\label{logic_8h_ae729ece2114ad9a6ad90d575ca4c51df}} 
+\index{logic.h@{logic.h}!ifThenElse@{ifThenElse}}
+\index{ifThenElse@{ifThenElse}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{ifThenElse()}{ifThenElse()}}
+{\footnotesize\ttfamily void if\+Then\+Else (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+se o topo da stack for verdadeiro, ou seja, qualquer elemento exceto o zero, a funçao coloca no topo da stack o penultimo elemento, caso contrario coloca o antepenultimo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_ae60b3ad1e403dc5348a4549f5b45fce7}\label{logic_8h_ae60b3ad1e403dc5348a4549f5b45fce7}} 
+\index{logic.h@{logic.h}!NAO@{NAO}}
+\index{NAO@{NAO}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{NAO()}{NAO()}}
+{\footnotesize\ttfamily void N\+AO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack 1 (verdadeiro) se o topo for zero e 0 se o topo da stack for qualquer elemento exceto o zero ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_acdb6eda92820c2cd303a492c8376c1e3}\label{logic_8h_acdb6eda92820c2cd303a492c8376c1e3}} 
+\index{logic.h@{logic.h}!ouShortcout@{ouShortcout}}
+\index{ouShortcout@{ouShortcout}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{ouShortcout()}{ouShortcout()}}
+{\footnotesize\ttfamily void ou\+Shortcout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack 0 se os dois ultimos elementos da stack forem zero , caso contrario retorna o penultimo elemento 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logic_8h_a992311a356550e46528bc1d03eb23485}\label{logic_8h_a992311a356550e46528bc1d03eb23485}} 
+\index{logic.h@{logic.h}!SMALLER@{SMALLER}}
+\index{SMALLER@{SMALLER}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{SMALLER()}{SMALLER()}}
+{\footnotesize\ttfamily void S\+M\+A\+L\+L\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack 0 (falso) se o topo for inferior ao penultimo elemento e 1 (verdadeiro) se for superior 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem de stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,138 @@
+\hypertarget{variaveis_8c}{}\doxysection{variaveis.\+c File Reference}
+\label{variaveis_8c}\index{variaveis.c@{variaveis.c}}
+{\ttfamily \#include \char`\"{}stack3.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for variaveis.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stack3_8h_a4e41b34fb87c918e012cde5b33af31bf}{D\+A\+TA}} \mbox{\hyperlink{variaveis_8c_a2386fe98afde4232f9c44ed3cac92613}{transforma\+L\+O\+NG}} (long x)
+\begin{DoxyCompactList}\small\item\em funçao que converte para L\+O\+NG o topo da stack ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stack3_8h_a4e41b34fb87c918e012cde5b33af31bf}{D\+A\+TA}} \mbox{\hyperlink{variaveis_8c_a948014d1a960f24b606610b1d2d31246}{transforma\+D\+O\+U\+B\+LE}} (double x)
+\begin{DoxyCompactList}\small\item\em funçao que converte para D\+O\+U\+B\+LE o topo da stack ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stack3_8h_a4e41b34fb87c918e012cde5b33af31bf}{D\+A\+TA}} \mbox{\hyperlink{variaveis_8c_a768af51fbdf9a79f8f037baabf5baeb3}{transforma\+C\+H\+AR}} (char x)
+\begin{DoxyCompactList}\small\item\em funçao que converte para C\+H\+AR o topo da stack ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{variaveis_8c_a262fd2995fb913ac19aaed4466449def}{new\+\_\+stack}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em funçao que vai a certa posição do array e exibe o valor por omissão \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{variaveis_8c_a1f9a744b20e31dfad2f9310a22bd151d}{letras}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s, char letra)
+\begin{DoxyCompactList}\small\item\em funçao que coloca no topo da stack o conteúdo da variável que é passado como parametro \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{variaveis_8c_aa97ae06406264a97b678671578465b36}{dois\+Pontos\+Letra}} (\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$s, char letra)
+\begin{DoxyCompactList}\small\item\em funçao que copia o que está no topo da stack para a variável \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{variaveis_8c_aa97ae06406264a97b678671578465b36}\label{variaveis_8c_aa97ae06406264a97b678671578465b36}} 
+\index{variaveis.c@{variaveis.c}!doisPontosLetra@{doisPontosLetra}}
+\index{doisPontosLetra@{doisPontosLetra}!variaveis.c@{variaveis.c}}
+\doxysubsubsection{\texorpdfstring{doisPontosLetra()}{doisPontosLetra()}}
+{\footnotesize\ttfamily void dois\+Pontos\+Letra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s,  }\item[{char}]{letra }\end{DoxyParamCaption})}
+
+
+
+funçao que copia o que está no topo da stack para a variável 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem da stack como parametro ~\newline
+ \\
+\hline
+{\em letra} & -\/ passagem da variavel como parametro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{variaveis_8c_a1f9a744b20e31dfad2f9310a22bd151d}\label{variaveis_8c_a1f9a744b20e31dfad2f9310a22bd151d}} 
+\index{variaveis.c@{variaveis.c}!letras@{letras}}
+\index{letras@{letras}!variaveis.c@{variaveis.c}}
+\doxysubsubsection{\texorpdfstring{letras()}{letras()}}
+{\footnotesize\ttfamily void letras (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s,  }\item[{char}]{letra }\end{DoxyParamCaption})}
+
+
+
+funçao que coloca no topo da stack o conteúdo da variável que é passado como parametro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem da stack como parametro \\
+\hline
+{\em letra} & -\/ passagem da variavel como elemento \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{variaveis_8c_a262fd2995fb913ac19aaed4466449def}\label{variaveis_8c_a262fd2995fb913ac19aaed4466449def}} 
+\index{variaveis.c@{variaveis.c}!new\_stack@{new\_stack}}
+\index{new\_stack@{new\_stack}!variaveis.c@{variaveis.c}}
+\doxysubsubsection{\texorpdfstring{new\_stack()}{new\_stack()}}
+{\footnotesize\ttfamily void new\+\_\+stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stack3_8h_ade8bb1f37e07eb511f3873082665d739}{S\+T\+A\+CK}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+funçao que vai a certa posição do array e exibe o valor por omissão 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ passagem da stack como parametro ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{variaveis_8c_a768af51fbdf9a79f8f037baabf5baeb3}\label{variaveis_8c_a768af51fbdf9a79f8f037baabf5baeb3}} 
+\index{variaveis.c@{variaveis.c}!transformaCHAR@{transformaCHAR}}
+\index{transformaCHAR@{transformaCHAR}!variaveis.c@{variaveis.c}}
+\doxysubsubsection{\texorpdfstring{transformaCHAR()}{transformaCHAR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stack3_8h_a4e41b34fb87c918e012cde5b33af31bf}{D\+A\+TA}} transforma\+C\+H\+AR (\begin{DoxyParamCaption}\item[{char}]{x }\end{DoxyParamCaption})}
+
+
+
+funçao que converte para C\+H\+AR o topo da stack ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ passagem de um elemento como parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna o elemento ja convertido 
+\end{DoxyReturn}
+\mbox{\Hypertarget{variaveis_8c_a948014d1a960f24b606610b1d2d31246}\label{variaveis_8c_a948014d1a960f24b606610b1d2d31246}} 
+\index{variaveis.c@{variaveis.c}!transformaDOUBLE@{transformaDOUBLE}}
+\index{transformaDOUBLE@{transformaDOUBLE}!variaveis.c@{variaveis.c}}
+\doxysubsubsection{\texorpdfstring{transformaDOUBLE()}{transformaDOUBLE()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stack3_8h_a4e41b34fb87c918e012cde5b33af31bf}{D\+A\+TA}} transforma\+D\+O\+U\+B\+LE (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+funçao que converte para D\+O\+U\+B\+LE o topo da stack ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ passagem de um elemento como parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna o elemento ja convertido 
+\end{DoxyReturn}
+\mbox{\Hypertarget{variaveis_8c_a2386fe98afde4232f9c44ed3cac92613}\label{variaveis_8c_a2386fe98afde4232f9c44ed3cac92613}} 
+\index{variaveis.c@{variaveis.c}!transformaLONG@{transformaLONG}}
+\index{transformaLONG@{transformaLONG}!variaveis.c@{variaveis.c}}
+\doxysubsubsection{\texorpdfstring{transformaLONG()}{transformaLONG()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stack3_8h_a4e41b34fb87c918e012cde5b33af31bf}{D\+A\+TA}} transforma\+L\+O\+NG (\begin{DoxyParamCaption}\item[{long}]{x }\end{DoxyParamCaption})}
+
+
+
+funçao que converte para L\+O\+NG o topo da stack ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ passagem de um elemento como parametro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna o elemento ja convertido 
+\end{DoxyReturn}
