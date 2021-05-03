@@ -2,28 +2,33 @@
 #define ___STACK_H___
 #include <assert.h>
 /**
- *  \brief struct que enumera os tipos e vai aplica-los na structdata 
+ *  Struct que enumera os tipos e vai aplica-los na structdata 
  */
-typedef enum {LONG = 1, DOUBLE = 2, CHAR = 4, STRING = 8} TYPE;
+typedef enum {
+  LONG = 1,    /**< Tipo Long com o valor 1 (2⁰) associado */
+  DOUBLE = 2,  /**< Tipo Double com o valor 2 (2¹) associado */
+  CHAR = 4,    /**< Tipo Char com o valor 4 (2²) associado */
+  STRING = 8   /**< Tipo String com o valor 8 (2³) associado */
+} TYPE;
 
 /**
- *  \brief struct que contem os varios tipos de dados 
+ *  Struct que contem os varios tipos de dados 
  */
 typedef struct data {
-  TYPE type;
-  long LONG;
-  double DOUBLE;
-  char CHAR;
-  char *STRING;
+  TYPE type;      /**< tipos de dados vindos do enum TYPE */
+  long LONG;      /**< Tipo long */
+  double DOUBLE;  /**< Tipo double */
+  char CHAR;      /**< Tipo char */
+  char *STRING;   /**< Tipo string */
 } DATA;
 /**
- *  \brief struct que define um array com 26 elementos que representam as letras do abecedário e estrutura da stack , com uma variavel que dá o tamanho e o numero de elementos 
+ *  Struct que define um array com 26 elementos que representam as letras do abecedário e estrutura da stack , com uma variavel que dá o tamanho e o numero de elementos 
  */
 typedef struct stack {
   DATA array[26];
-  DATA *stack;
-  int size;
-  int n_elems;
+  DATA *stack;   /**< Tipo da stack */
+  int size;      /**< Tamanho da stack */
+  int n_elems;   /**< Numero de elementos ao momento na stack */
 } STACK;
 
 int has_type(DATA elem, int mask);
