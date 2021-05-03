@@ -25,10 +25,10 @@ typedef struct data {
  *  Struct que define um array com 26 elementos que representam as letras do abecedário e estrutura da stack , com uma variavel que dá o tamanho e o numero de elementos 
  */
 typedef struct stack {
-  DATA array[26];
-  DATA *stack;   /**< Tipo da stack */
-  int size;      /**< Tamanho da stack */
-  int n_elems;   /**< Numero de elementos ao momento na stack */
+  DATA array[26]; /** Array das letras */
+  DATA *stack;    /**< Tipo da stack */
+  int size;       /**< Tamanho da stack */
+  int n_elems;    /**< Numero de elementos ao momento na stack */
 } STACK;
 
 int has_type(DATA elem, int mask);
