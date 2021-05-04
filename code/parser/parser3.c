@@ -22,8 +22,6 @@
  */
 
 
-
-
 void parse3(char *line, STACK *s) {
    new_stack(s);
    char *delims = " \t\n";  
@@ -44,173 +42,251 @@ void parse3(char *line, STACK *s) {
          push_STRING(s,token);
       }
    } 
-   else if (strcmp(token, "e<")== 0 ) {  
-      EMENOR(s);
-   } else if (strcmp(token, "e>")== 0 ) {  
-      EMAIOR(s);
-   } else if (strcmp(token, "<")== 0 )  { 
-      SMALLER(s);
-   } else if (strcmp(token, ">")== 0 )  { 
-      BIGGER(s);
-   } else if (strcmp(token, "=")== 0 )  { 
-      EQUAL(s);
-   } else if (strcmp(token, "!")== 0 )  { 
-      NAO(s);
-   } else if (strcmp(token, "e&")== 0 ) {  
-      eShortcout(s);
-   } else if (strcmp(token, "?")== 0 )  { 
-      ifThenElse(s);
-   } else if (strcmp(token, "e|")== 0 ) {  
-      ouShortcout(s);
-   } else if(strcmp(token, "A")== 0 )  {
-      letras(s,'A');
-   } else if(strcmp(token, "B")== 0 )  {
-      letras(s,'B');
-   } else if(strcmp(token, "C")== 0 )  {
-      letras(s,'C');
-   } else if(strcmp(token, "D")== 0 )  {
-      letras(s,'D');
-   } else if(strcmp(token, "E")== 0 )  {
-      letras(s,'E');
-   } else if(strcmp(token, "F")== 0 )  {
-      letras(s,'F');
-   } else if(strcmp(token, "G")== 0 )  {
-      letras(s,'G');
-   } else if(strcmp(token, "H")== 0 )  {
-      letras(s,'H');
-   } else if(strcmp(token, "I")== 0 )  {
-      letras(s,'I');
-   } else if(strcmp(token, "J")== 0 )  {
-      letras(s,'J');
-   } else if(strcmp(token, "K")== 0 )  {
-      letras(s,'K');
-   } else if(strcmp(token, "L")== 0 )  {
-      letras(s,'L');
-   } else if(strcmp(token, "M")== 0 )  {
-      letras(s,'M');
-   } else if(strcmp(token, "N")== 0 )  {  
-      letras(s,'N');
-   } else if(strcmp(token, "O")== 0 )  {  
-      letras(s,'O');
-   } else if(strcmp(token, "P")== 0 )  {
-      letras(s,'P');
-   } else if(strcmp(token, "Q")== 0 )  {
-      letras(s,'Q');
-   } else if(strcmp(token, "R")== 0 )  { 
-      letras(s,'R');
-   } else if(strcmp(token, "S")== 0 )  {   
-      letras(s,'S');
-   } else if(strcmp(token, "T")== 0 )  {  
-      letras(s,'T');
-   } else if(strcmp(token, "U")== 0 )  {
-      letras(s,'U');
-   } else if(strcmp(token, "V")== 0 )  {
-      letras(s,'V');
-   } else if(strcmp(token, "W")== 0 )  {
-      letras(s,'W');
-   } else if(strcmp(token, "X")== 0 )  { // 23
-      letras(s,'X');
-   } else if(strcmp(token, "Y")== 0 )  {
-      letras(s,'Y');
-   } else if(strcmp(token, "Z")== 0 )  {
-      letras(s,'Z');
-   } else if(strcmp(token, ":A")== 0 )  {
-      doisPontosLetra(s,'A');
-   } else if(strcmp(token, ":B")== 0 )  {
-      doisPontosLetra(s,'B');
-   } else if(strcmp(token, ":C")== 0 )  {
-      doisPontosLetra(s,'C');
-   } else if(strcmp(token, ":D")== 0 )  {
-      doisPontosLetra(s,'D');
-   } else if(strcmp(token, ":E")== 0 )  {
-      doisPontosLetra(s,'E');
-   } else if(strcmp(token, ":F")== 0 )  {
-      doisPontosLetra(s,'F');
-   } else if(strcmp(token, ":G")== 0 )  {
-      doisPontosLetra(s,'G');
-   } else if(strcmp(token, ":H")== 0 )  {
-      doisPontosLetra(s,'H');
-   } else if(strcmp(token, ":I")== 0 )  {
-      doisPontosLetra(s,'I');
-   } else if(strcmp(token, ":J")== 0 )  {
-      doisPontosLetra(s,'J');
-   } else if(strcmp(token, ":K")== 0 )  {
-      doisPontosLetra(s,'K');
-   } else if(strcmp(token, ":L")== 0 )  {
-      doisPontosLetra(s,'L');
-   } else if(strcmp(token, ":M")== 0 )  {
-      doisPontosLetra(s,'M');
-   } else if(strcmp(token, ":N")== 0 )  {
-      doisPontosLetra(s,'N');
-   } else if(strcmp(token, ":O")== 0 )  {
-      doisPontosLetra(s,'O');
-   } else if(strcmp(token, ":P")== 0 )  {
-      doisPontosLetra(s,'P');
-   } else if(strcmp(token, ":Q")== 0 )  {
-      doisPontosLetra(s,'Q');
-   } else if(strcmp(token, ":R")== 0 )  {
-      doisPontosLetra(s,'R');
-   } else if(strcmp(token, ":S")== 0 )  {
-      doisPontosLetra(s,'S');
-   } else if(strcmp(token, ":T")== 0 )  {
-      doisPontosLetra(s,'T');
-   } else if(strcmp(token, ":U")== 0 )  {
-      doisPontosLetra(s,'U');
-   } else if(strcmp(token, ":V")== 0 )  {
-      doisPontosLetra(s,'V');
-   } else if(strcmp(token, ":W")== 0 )  {
-      doisPontosLetra(s,'W');
-   }else if(strcmp(token, ":X")== 0 )  {
-      doisPontosLetra(s,'X');
-   } else if(strcmp(token, ":Y")== 0 )  {
-      doisPontosLetra(s,'Y');
-   } else if(strcmp(token, ":Z")== 0 )  {
-      doisPontosLetra(s,'Z');
-   }  else if (strcmp(token, "+")== 0 )  { 
-      SUM(s);
-   } else if (strcmp(token, "-")== 0 ) {
-      SUBTRACT(s);
-   } else if (strcmp(token, "*")== 0 ) {
-      MULTIPLY(s);
-   } else if (strcmp(token, "/")== 0 ) {
-      DIVISION(s);
-   } else if (strcmp(token, "(")== 0 ) { 
-      DECREMENT(s);
-   } else if (strcmp(token, ")")== 0 ) { 
-      INCREMENT(s);                          
-   } else if (strcmp(token, "%")== 0 ) { 
-      MODULE(s);                          
-   } else if (strcmp(token, "#")== 0 ) { 
-      EXPO(s); 
-   } else if (strcmp(token, "&")== 0 ) { 
-      AMPERSAND(s); 
-   } else if (strcmp(token, "^")== 0 ) { 
-      XOR(s); 
-   } else if (strcmp(token, "~")== 0 ) { 
-      NOT(s); 
-   } else if (strcmp(token, "|")== 0 ) { 
-      OR(s); 
-   } else if(strcmp(token, "_")== 0 )  { 
-      UNDERSCORE(s);
-   } else if(strcmp(token, ";")== 0 )  { 
-      SEMICOLON(s);
-   } else if(strcmp(token, "\\")== 0 ) {
-      BACK_SLASH(s);
-   } else if(strcmp(token, "@")== 0 ) {
-      AT_SIGN(s);
-   } else if(strcmp(token, "$")== 0 ) { 
-      COPY(s);
-   } else if(strcmp(token, "l")== 0 ) {
-      read(s);
-   } else if(strcmp(token, "i")== 0 ) {
-      toInt(s);
-   } else if(strcmp(token, "f")== 0 ) { 
-      toDouble(s);
-   } else if (strcmp(token, "c")== 0 ) {
-      toChar(s);
-   } else {
-      push_STRING(s, token);
+   switch (*token) {
+      case 'e<':
+       EMENOR(s);
+        break;
+      case 'e>':
+       EMAIOR(s);
+        break;
+      case '<':
+       SMALLER(s);
+        break;
+      case '>':
+       BIGGER(s);
+        break;
+      case '=':
+       EQUAL(s);
+        break;
+      case '!':
+       NAO(s);
+        break;
+      case 'e&':
+       eShortcout(s);
+        break;
+      case '?':
+       ifThenElse(s);
+        break;
+      case 'e|':
+       ouShortcout(s);
+        break;
+      case 'A':
+       letras(s, 'A');
+        break;
+      case 'B':
+       letras(s, 'B');
+        break;
+      case 'C':
+       letras(s, 'C');
+        break;
+      case 'D':
+       letras(s, 'D');
+        break;
+      case 'E':
+       letras(s, 'E');
+        break;
+      case 'F':
+       letras(s, 'F');
+        break;
+      case 'G':
+       letras(s, 'G');
+        break;
+      case 'H':
+       letras(s, 'H');
+        break;
+      case 'I':
+       letras(s, 'I');
+        break;
+      case 'J':
+       letras(s, 'J');
+        break;
+      case 'K':
+       letras(s, 'K');
+        break;
+      case 'L':
+       letras(s, 'L');
+        break;
+      case 'M':
+       letras(s, 'M');
+        break;
+      case 'N':
+       letras(s, 'N');
+        break;
+      case 'O':
+       letras(s, 'O');
+        break;
+      case 'P':
+       letras(s, 'P');
+        break;
+      case 'Q':
+       letras(s, 'Q');
+        break;
+      case 'R':
+       letras(s, 'R');
+        break;
+      case 'S':
+       letras(s, 'S');
+        break;
+      case 'T':
+       letras(s, 'T');
+        break;
+      case 'U':
+       letras(s, 'U');
+        break;
+      case 'V':
+       letras(s, 'V');
+        break;
+      case 'W':
+       letras(s, 'W');
+        break;
+      case 'X':
+       letras(s, 'X');
+        break;
+      case 'Y':
+       letras(s, 'Y');
+        break;
+      case 'Z':
+       letras(s, 'Z');
+        break;
+      case ':A':
+       doisPontosLetra (s,'A');
+        break;
+      case ':B':
+       doisPontosLetra (s,'B');
+        break;
+      case ':C':
+       doisPontosLetra (s,'C');
+        break;
+      case ':D':
+       doisPontosLetra (s,'D');
+        break;
+      case ':E':
+       doisPontosLetra (s,'E');
+        break;
+      case ':F':
+       doisPontosLetra (s,'F');
+        break;
+      case ':G':
+       doisPontosLetra (s,'G');
+        break;
+      case ':H':
+       doisPontosLetra (s,'H');
+        break;
+      case ':I':
+       doisPontosLetra (s,'I');
+        break;
+      case ':J':
+       doisPontosLetra (s,'J');
+        break;
+      case ':K':
+       doisPontosLetra (s,'K');
+        break;
+      case ':L':
+       doisPontosLetra (s,'L');
+        break;
+      case ':M':
+       doisPontosLetra (s,'M');
+        break;
+      case ':N':
+       doisPontosLetra (s,'N');
+        break;
+      case ':O':
+       doisPontosLetra (s,'O');
+        break;
+      case ':P':
+       doisPontosLetra (s,'P');
+        break;
+      case ':Q':
+       doisPontosLetra (s,'Q');
+        break;
+      case ':R':
+       doisPontosLetra (s,'R');
+        break;
+      case ':S':
+       doisPontosLetra (s,'S');
+        break;
+      case ':T':
+       doisPontosLetra (s,'T');
+        break;
+      case ':U':
+       doisPontosLetra (s,'U');
+        break;
+      case ':V':
+       doisPontosLetra (s,'V');
+        break;
+      case ':W':
+       doisPontosLetra (s,'W');
+        break;
+      case ':X':
+       doisPontosLetra (s,'X');
+        break;
+      case ':Y':
+       doisPontosLetra (s,'Y');
+        break;
+      case ':Z':
+       doisPontosLetra (s,'Z');
+        break;
+       case '+':
+        SUM(s);
+         break;
+       case '-':
+        SUBTRACT(s);
+         break;
+       case '*':
+        MULTIPLY (s);
+         break;
+       case '/':
+         DIVISION (s);
+          break;
+       case '(':
+        DECREMENT(s);
+         break;
+       case ')':
+        INCREMENT(s);
+         break;
+       case '%':
+        MODULE(s);
+        break;
+       case '#':
+        EXPO(s);
+         break;
+       case '&':
+        AMPERSAND(s);
+         break;
+       case '^':  
+        XOR(s);
+        break;
+       case '~':
+        NOT(s);
+         break;
+       case '|':
+        OR(s);
+         break;
+       case '_':
+        UNDERSCORE(s);
+         break;
+       case ';':
+        SEMICOLON(s);
+        break;
+       case '\\':
+        BACK_SLASH(s);
+         break;
+       case '$':
+        AT_SIGN(s); 
+         break;
+       case 'l':
+        read(s);
+         break;
+       case 'i':
+        toInt(s);
+         break;
+       case 'f':
+        toDouble(s);
+         break;
+       case 'c':
+        toChar(s);
+         break;
+     }
    }
-   }
-   print_stack(s);
-}
+print_stack(s);
+} 
