@@ -36,49 +36,69 @@ void parse(char *line, STACK *s) {
       } else {
          push_STRING(s, token);
       } 
-      }  else if (strcmp(token, "+")== 0 )  { 
-         SUM(s);
-      } else if (strcmp(token, "-")== 0 ) {
-         SUBTRACT(s);
-      } else if (strcmp(token, "*")== 0 ) {
-         MULTIPLY(s);
-      } else if (strcmp(token, "/")== 0 ) {
-         DIVISION(s);
-      } else if (strcmp(token, "(")== 0 ) { 
-         DECREMENT(s);
-      } else if (strcmp(token, ")")== 0 ) { 
-         INCREMENT(s);                          
-      } else if (strcmp(token, "%")== 0 ) { 
-         MODULE(s);                          
-      } else if (strcmp(token, "#")== 0 ) { 
-         EXPO(s); 
-      } else if (strcmp(token, "&")== 0 ) { 
-         AMPERSAND(s); 
-      } else if (strcmp(token, "^")== 0 ) { 
-         XOR(s); 
-      } else if (strcmp(token, "~")== 0 ) { 
-         NOT(s); 
-      } else if (strcmp(token, "|")== 0 ) { 
-         OR(s); 
-      } else if(strcmp(token, "_")== 0 )  { 
-         UNDERSCORE(s);
-      } else if(strcmp(token, ";")== 0 )  { 
-         SEMICOLON(s);
-      } else if(strcmp(token, "\\")== 0 ) {
-         BACK_SLASH(s);
-      } else if(strcmp(token, "@")== 0 ) {
-         AT_SIGN(s);
-      } else if(strcmp(token, "$")== 0 ) { 
-         COPY(s);
-      } else if(strcmp(token, "l")== 0 ) {
-         read(s);
-      } else if(strcmp(token, "i")== 0 ) {
-         toInt(s);
-      } else if(strcmp(token, "f")== 0 ) { 
-         toDouble(s);
-      } else if (strcmp(token, "c")== 0 ) {
-         toChar(s);
       } 
-   }
+       switch (*token) { 
+         case '+':
+          SUM(s);
+           break;
+          case '-':
+          SUBTRACT(s);
+           break;
+          case '*':
+          MULTIPLY (s);
+           break;
+          case '/':
+          DIVISION (s);
+           break;
+          case '(':
+          DECREMENT(s);
+           break;
+          case ')':
+          INCREMENT(s);
+           break;
+          case '%':
+          MODULE(s);
+           break;
+          case '#':
+          EXPO(s);
+           break;
+          case '&':
+          AMPERSAND(s);
+           break;
+          case '^':
+          XOR(s);
+           break;
+          case '~':
+          NOT(s);
+           break;
+          case '|':
+          OR(s);
+           break;
+          case '_':
+          UNDERSCORE(s);
+           break;
+          case ';':
+          SEMICOLON(s);
+           break;
+          case '\\':
+          BACK_SLASH(s);
+           break;
+          case '$':
+          AT_SIGN(s);
+           break;
+          case 'l':
+          read(s);
+           break;
+          case 'i':
+          toInt(s);
+           break;
+          case 'f':
+          toDouble(s);
+           break;
+          case 'c':
+          toChar(s);
+           break;
+         }
+      }
    print_stack(s); 
 }
