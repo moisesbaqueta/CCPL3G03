@@ -21,272 +21,285 @@
  *  @param strlen indica o tamanho duma string 
  */
 
-
-void parse3(char *line, STACK *s) {
+void parse3(char *line, STACK *s)
+{
    new_stack(s);
-   char *delims = " \t\n";  
-   for(char *token = strtok(line, delims); token != NULL; token = strtok(NULL, delims)) {
+   char *delims = " \t\n";
+   for (char *token = strtok(line, delims); token != NULL; token = strtok(NULL, delims))
+   {
       char *sobra1;
-      char *sobra2;                   
-      long val_l = strtol(token, &sobra1, 10);           
-      double val_d = strtod(token, &sobra2);              
-   if(strlen(sobra1) == 0) { 
-      push_LONG(s, val_l); 
-   } else if(strlen(sobra2) == 0) { 
-      push_DOUBLE(s, val_d);
-   } else if(strlen(token) != 2 && strlen(token) !=1)  {  
-      if(strlen(token)==1) {
-         push_CHAR(s,token[0]);
-      } 
-      else if(strlen(token)==2){
-         push_STRING(s,token);
+      char *sobra2;
+      long val_l = strtol(token, &sobra1, 10);
+      double val_d = strtod(token, &sobra2);
+      if (strlen(sobra1) == 0)
+      {
+         push_LONG(s, val_l);
       }
-   } 
-   switch (*token) {
-      case 'e<':
-       EMENOR(s);
-        break;
-      case 'e>':
-       EMAIOR(s);
-        break;
+      else if (strlen(sobra2) == 0)
+      {
+         push_DOUBLE(s, val_d);
+      }
+      else if (strlen(token) != 2 && strlen(token) != 1)
+      {
+         if (strlen(token) == 1)
+         {
+            push_CHAR(s, token[0]);
+         }
+         else if (strlen(token) == 2)
+         {
+            push_STRING(s, token);
+         }
+      }
+      switch (*token) {
+      case 'e':
+         switch (token[1])
+         {
+         case '<':
+            EMENOR(s);
+            break;
+         case '>':
+            EMAIOR(s);
+            break;
+         case '&':
+            eShortcout(s);
+            break;
+         case '|':
+            ouShortcout(s);
+            break;
+         }
+         break;
       case '<':
-       SMALLER(s);
-        break;
+         SMALLER(s);
+         break;
       case '>':
-       BIGGER(s);
-        break;
+         BIGGER(s);
+         break;
       case '=':
-       EQUAL(s);
-        break;
+         EQUAL(s);
+         break;
       case '!':
-       NAO(s);
-        break;
-      case 'e&':
-       eShortcout(s);
-        break;
+         NAO(s);
+         break;
       case '?':
-       ifThenElse(s);
-        break;
-      case 'e|':
-       ouShortcout(s);
-        break;
+         ifThenElse(s);
+         break;
       case 'A':
-       letras(s, 'A');
-        break;
+         letras(s, 'A');
+         break;
       case 'B':
-       letras(s, 'B');
-        break;
+         letras(s, 'B');
+         break;
       case 'C':
-       letras(s, 'C');
-        break;
+         letras(s, 'C');
+         break;
       case 'D':
-       letras(s, 'D');
-        break;
+         letras(s, 'D');
+         break;
       case 'E':
-       letras(s, 'E');
-        break;
+         letras(s, 'E');
+         break;
       case 'F':
-       letras(s, 'F');
-        break;
+         letras(s, 'F');
+         break;
       case 'G':
-       letras(s, 'G');
-        break;
+         letras(s, 'G');
+         break;
       case 'H':
-       letras(s, 'H');
-        break;
+         letras(s, 'H');
+         break;
       case 'I':
-       letras(s, 'I');
-        break;
+         letras(s, 'I');
+         break;
       case 'J':
-       letras(s, 'J');
-        break;
+         letras(s, 'J');
+         break;
       case 'K':
-       letras(s, 'K');
-        break;
+         letras(s, 'K');
+         break;
       case 'L':
-       letras(s, 'L');
-        break;
+         letras(s, 'L');
+         break;
       case 'M':
-       letras(s, 'M');
-        break;
+         letras(s, 'M');
+         break;
       case 'N':
-       letras(s, 'N');
-        break;
+         letras(s, 'N');
+         break;
       case 'O':
-       letras(s, 'O');
-        break;
+         letras(s, 'O');
+         break;
       case 'P':
-       letras(s, 'P');
-        break;
+         letras(s, 'P');
+         break;
       case 'Q':
-       letras(s, 'Q');
-        break;
+         letras(s, 'Q');
+         break;
       case 'R':
-       letras(s, 'R');
-        break;
+         letras(s, 'R');
+         break;
       case 'S':
-       letras(s, 'S');
-        break;
+         letras(s, 'S');
+         break;
       case 'T':
-       letras(s, 'T');
-        break;
+         letras(s, 'T');
+         break;
       case 'U':
-       letras(s, 'U');
-        break;
+         letras(s, 'U');
+         break;
       case 'V':
-       letras(s, 'V');
-        break;
+         letras(s, 'V');
+         break;
       case 'W':
-       letras(s, 'W');
-        break;
+         letras(s, 'W');
+         break;
       case 'X':
-       letras(s, 'X');
-        break;
+         letras(s, 'X');
+         break;
       case 'Y':
-       letras(s, 'Y');
-        break;
+         letras(s, 'Y');
+         break;
       case 'Z':
-       letras(s, 'Z');
-        break;
-      case ':A':
-       doisPontosLetra (s,'A');
-        break;
-      case ':B':
-       doisPontosLetra (s,'B');
-        break;
-      case ':C':
-       doisPontosLetra (s,'C');
-        break;
-      case ':D':
-       doisPontosLetra (s,'D');
-        break;
-      case ':E':
-       doisPontosLetra (s,'E');
-        break;
-      case ':F':
-       doisPontosLetra (s,'F');
-        break;
-      case ':G':
-       doisPontosLetra (s,'G');
-        break;
-      case ':H':
-       doisPontosLetra (s,'H');
-        break;
-      case ':I':
-       doisPontosLetra (s,'I');
-        break;
-      case ':J':
-       doisPontosLetra (s,'J');
-        break;
-      case ':K':
-       doisPontosLetra (s,'K');
-        break;
-      case ':L':
-       doisPontosLetra (s,'L');
-        break;
-      case ':M':
-       doisPontosLetra (s,'M');
-        break;
-      case ':N':
-       doisPontosLetra (s,'N');
-        break;
-      case ':O':
-       doisPontosLetra (s,'O');
-        break;
-      case ':P':
-       doisPontosLetra (s,'P');
-        break;
-      case ':Q':
-       doisPontosLetra (s,'Q');
-        break;
-      case ':R':
-       doisPontosLetra (s,'R');
-        break;
-      case ':S':
-       doisPontosLetra (s,'S');
-        break;
-      case ':T':
-       doisPontosLetra (s,'T');
-        break;
-      case ':U':
-       doisPontosLetra (s,'U');
-        break;
-      case ':V':
-       doisPontosLetra (s,'V');
-        break;
-      case ':W':
-       doisPontosLetra (s,'W');
-        break;
-      case ':X':
-       doisPontosLetra (s,'X');
-        break;
-      case ':Y':
-       doisPontosLetra (s,'Y');
-        break;
-      case ':Z':
-       doisPontosLetra (s,'Z');
-        break;
-       case '+':
-        SUM(s);
+         letras(s, 'Z');
          break;
-       case '-':
-        SUBTRACT(s);
+      case ':':
+         switch (token[1]) {
+            case 'A':
+            doisPontosLetra(s, 'A');
+         break; 
+            case 'B':
+            doisPontosLetra(s, 'B');
          break;
-       case '*':
-        MULTIPLY (s);
+            case 'C':
+            doisPontosLetra(s, 'C');
          break;
-       case '/':
-         DIVISION (s);
-          break;
-       case '(':
-        DECREMENT(s);
+            case 'D':
+            doisPontosLetra(s, 'D');
          break;
-       case ')':
-        INCREMENT(s);
+            case 'E':
+            doisPontosLetra(s, 'E');
          break;
-       case '%':
-        MODULE(s);
-        break;
-       case '#':
-        EXPO(s);
+            case 'F':
+            doisPontosLetra(s, 'F');
          break;
-       case '&':
-        AMPERSAND(s);
+         case 'G':
+            doisPontosLetra(s, 'G');
          break;
-       case '^':  
-        XOR(s);
-        break;
-       case '~':
-        NOT(s);
+         case 'H':
+            doisPontosLetra(s, 'H');
          break;
-       case '|':
-        OR(s);
+         case 'I':
+            doisPontosLetra(s, 'I');
          break;
-       case '_':
-        UNDERSCORE(s);
+         case 'J':
+            doisPontosLetra(s, 'J');
          break;
-       case ';':
-        SEMICOLON(s);
-        break;
-       case '\\':
-        BACK_SLASH(s);
+         case 'K':
+            doisPontosLetra(s, 'K');
          break;
-       case '$':
-        AT_SIGN(s); 
+         case 'L':
+            doisPontosLetra(s, 'L');
          break;
-       case 'l':
-        read(s);
+         case 'M':
+            doisPontosLetra(s, 'M');
          break;
-       case 'i':
-        toInt(s);
+         case 'N':
+            doisPontosLetra(s, 'N');
          break;
-       case 'f':
-        toDouble(s);
+         case 'O':
+            doisPontosLetra(s, 'O');
          break;
-       case 'c':
-        toChar(s);
+         case 'P':
+            doisPontosLetra(s, 'P');
          break;
-     }
+         case 'Q':
+            doisPontosLetra(s, 'Q');
+         break;
+         case 'R':
+            doisPontosLetra(s, 'R');
+         break;
+         case 'S':
+            doisPontosLetra(s, 'S');
+         break;
+         case 'T':
+            doisPontosLetra(s, 'T');
+         break;
+         case 'U':
+            doisPontosLetra(s, 'U');
+         break;
+         case 'W':
+            doisPontosLetra(s, 'W');
+         break;
+         case 'X':
+            doisPontosLetra(s, 'X');
+         break;
+         case 'Y':
+            doisPontosLetra(s, 'Y');
+         break;
+         case 'Z':
+            doisPontosLetra(s, 'Z');
+         break;}
+      break;
+      case '+':
+         SUM(s);
+         break;
+      case '-':
+         SUBTRACT(s);
+         break;
+      case '*':
+         MULTIPLY(s);
+         break;
+      case '/':
+         DIVISION(s);
+         break;
+      case '(':
+         DECREMENT(s);
+         break;
+      case ')':
+         INCREMENT(s);
+         break;
+      case '%':
+         MODULE(s);
+         break;
+      case '#':
+         EXPO(s);
+         break;
+      case '&':
+         AMPERSAND(s);
+         break;
+      case '^':
+         XOR(s);
+         break;
+      case '~':
+         NOT(s);
+         break;
+      case '|':
+         OR(s);
+         break;
+      case '_':
+         UNDERSCORE(s);
+         break;
+      case ';':
+         SEMICOLON(s);
+         break;
+      case '\\':
+         BACK_SLASH(s);
+         break;
+      case '$':
+         AT_SIGN(s);
+         break;
+      case 'l':
+         read(s);
+         break;
+      case 'i':
+         toInt(s);
+         break;
+      case 'f':
+         toDouble(s);
+         break;
+      case 'c':
+         toChar(s);
+         break;
+      }
    }
-print_stack(s);
-} 
+   print_stack(s);
+}
