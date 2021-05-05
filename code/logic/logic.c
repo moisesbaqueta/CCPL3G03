@@ -14,28 +14,28 @@ void EMAIOR(STACK *s) {
 if(has_type(x, LONG) && has_type(y, LONG)) {            
     if(x.LONG >= y.LONG){
         push(s,x);
-    }else push(s,y); }     
-else if (has_type(x, DOUBLE) && has_type(y, LONG)) {   
+    }else push(s,y); }    
+if (has_type(x, DOUBLE) && has_type(y, LONG)) {   
     if(x.DOUBLE >= y.LONG){
         push(s,x);
     }else push(s,y); }                   
-else if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) { 
+if (has_type(x, DOUBLE) && has_type(y, DOUBLE)) { 
     if(x.DOUBLE >= y.DOUBLE){
         push(s,x);
     }else push(s,y); }                 
-else if (has_type(x, LONG) && has_type(y, DOUBLE)) {   
+if (has_type(x, LONG) && has_type(y, DOUBLE)) {   
     if(x.LONG >= y.DOUBLE){
         push(s,x);
     }else push(s,y); }                  
-else if (has_type(x, CHAR) && has_type(y, LONG)) { 
+if (has_type(x, CHAR) && has_type(y, LONG)) { 
     if(x.CHAR >= y.LONG){
         push(s,x);
     }else push(s,y); }                      
-else if (has_type(x, LONG) && has_type(y, CHAR)) {  
+if (has_type(x, LONG) && has_type(y, CHAR)) {  
     if(x.LONG >= y.CHAR){
         push(s,x);
     }else push(s,y); }                      
-else if (has_type(x, CHAR) && has_type(y, DOUBLE)) {   
+if (has_type(x, CHAR) && has_type(y, DOUBLE)) {   
     if(x.CHAR >= y.DOUBLE){
         push(s,x);
     }else push(s,y); }                
@@ -43,11 +43,12 @@ else if (has_type(x, DOUBLE) && has_type(y, CHAR)) {
     if(x.DOUBLE >= y.CHAR){
         push(s,x);
     }else push(s,y); }
-else if (has_type(x, CHAR) && has_type(y, CHAR)) {      
+if (has_type(x, CHAR) && has_type(y, CHAR)) {      
     if(x.CHAR >= y.CHAR){
         push(s,x);
     }else push(s,y); }                        
 }
+
 /**
  * \brief funçao que coloca no topo da stack o menor entre os dois elementos do topo da stack  
  * @param s - passagem de stack como parametro  
