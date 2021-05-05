@@ -463,6 +463,7 @@ void ouShortcout(STACK *s) {
         } else push(s,y);
     }
 }
+            
 /**
  * \brief se o topo da stack for verdadeiro, ou seja, qualquer elemento exceto o zero, a funçao coloca no topo da stack o penultimo elemento, caso contrario coloca o antepenultimo 
  * @param s - passagem de stack como parametro  
