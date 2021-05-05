@@ -402,83 +402,65 @@ void ouShortcout(STACK *s) {
         if(x.LONG == 0 && y.LONG == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.LONG != 0 && y.LONG ==0) {                          
+        if (x.LONG != 0 && y.LONG ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, LONG) && has_type(y, DOUBLE)) {
+        } else push(s,y);
+    if(has_type(x, LONG) && has_type(y, DOUBLE)) {
         if(x.LONG == 0 && y.DOUBLE == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.LONG != 0 && y.DOUBLE ==0) {                          
+        if (x.LONG != 0 && y.DOUBLE ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, DOUBLE) && has_type(y, LONG)) {
+        } else push(s,y);
+    if(has_type(x, DOUBLE) && has_type(y, LONG)) {
         if(x.DOUBLE == 0 && y.DOUBLE == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.DOUBLE != 0 && y.LONG ==0) {                          
+        }  (x.DOUBLE != 0 && y.LONG ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, DOUBLE) && has_type(y, DOUBLE)) {     
+        } else push(s,y);
+    if(has_type(x, DOUBLE) && has_type(y, DOUBLE)) {     
         if(x.DOUBLE == 0 && y.DOUBLE == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.DOUBLE != 0 && y.DOUBLE ==0) {                          
+        if (x.DOUBLE != 0 && y.DOUBLE ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, CHAR) && has_type(y, LONG)) {
+        } else push(s,y);
+    if(has_type(x, CHAR) && has_type(y, LONG)) {
         if(x.CHAR == 0 && y.LONG == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.CHAR != 0 && y.LONG ==0) {                          
+        if (x.CHAR != 0 && y.LONG ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, LONG) && has_type(y, CHAR)) {
+        } else push(s,y);
+    if(has_type(x, LONG) && has_type(y, CHAR)) {
         if(x.LONG == 0 && y.CHAR == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.LONG != 0 && y.CHAR == 0) {                          
+        if (x.LONG != 0 && y.CHAR == 0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, CHAR) && has_type(y, CHAR)) {
+        } else push(s,y);
+    if(has_type(x, CHAR) && has_type(y, CHAR)) {
         if(x.CHAR == 0 && y.CHAR == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.CHAR != 0 && y.CHAR ==0) {                      
+        if (x.CHAR != 0 && y.CHAR ==0) {                      
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, DOUBLE) && has_type(y, CHAR)) {
+        } else push(s,y);
+    if(has_type(x, DOUBLE) && has_type(y, CHAR)) {
         if(x.DOUBLE == 0 && y.CHAR == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.DOUBLE != 0 && y.CHAR ==0) {                          
+        if (x.DOUBLE != 0 && y.CHAR ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
-    } else if(has_type(x, CHAR) && has_type(y, DOUBLE)) {
+        } else push(s,y);
+    if(has_type(x, CHAR) && has_type(y, DOUBLE)) {
         if(x.CHAR == 0 && y.DOUBLE == 0) {
            r.LONG = 0;
            push(s,r);
-        } else if (x.CHAR != 0 && y.DOUBLE ==0) {                          
+        if (x.CHAR != 0 && y.DOUBLE ==0) {                          
            push(s,x); 
-        } else {
-           push(s,y);
-        }
+        } else push(s,y);
     }
 }
 /**
