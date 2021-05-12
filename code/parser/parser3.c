@@ -273,8 +273,11 @@ void parse3(char *line, STACK *s)
       case '\\':
          BACK_SLASH(s);
          break;
-      case '$':
+      case '@':
          AT_SIGN(s);
+         break;
+      case '$':
+         COPY(s);
          break;
       case 'l':
          read(s);
