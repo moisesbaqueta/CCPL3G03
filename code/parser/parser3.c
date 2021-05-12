@@ -39,17 +39,6 @@ void parse3(char *line, STACK *s)
       {
          push_DOUBLE(s, val_d);
       }
-      else if (strlen(token) != 2 && strlen(token) != 1)
-      {
-         if (strlen(token) == 1)
-         {
-            push_CHAR(s, token[0]);
-         }
-         else if (strlen(token) == 2)
-         {
-            push_STRING(s, token);
-         }
-      }
       switch (*token) {
       case 'e':
          switch (token[1])
